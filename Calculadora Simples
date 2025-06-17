@@ -1,0 +1,52 @@
+<?php
+
+$a = 5;
+$b = 10;
+
+echo "<h1>Operações Matemáticas</h1>";
+echo "<hr>";
+
+function soma(int $a, int $b): int {
+    return $a + $b;
+}
+echo "A soma de 5 e 10 é: " . soma (5, 10) . "<br>";
+echo "A soma de 20 e 30 é:" . soma (20, 30) . "<br>";
+echo soma (5, 10) + soma (20, 30) . "<br>";
+
+var_dump(soma(5, 10));
+echo "<hr>";
+
+function subtracao(int $a, int $b): int {
+    return $a - $b;
+}
+echo "A subtraçao de 10 e 5 é: " . subtracao(10, 5) . "<br>";
+echo "A subtraçao de 30 e 20 é:" . subtracao(30, 20) . "<br>";
+echo subtracao(10, 5) - subtracao(30, 20) . "<br>";
+
+var_dump(subtracao(10, 5));
+echo "<hr>";
+
+function multiplicacao(int $a, int $b): int {
+    return $a * $b;
+}
+echo "A multiplicaçao de 5 e 10 é: " . multiplicacao(5, 10) . "<br>";
+echo "A multiplicaçao de 20 e 30 é: " . multiplicacao(20, 30) . "<br>";
+echo multiplicacao(5, 10) * multiplicacao(20, 30) . "<br>";
+
+var_dump(multiplicacao(5, 10));
+echo "<hr>";
+
+function divisao(int $a, int $b): float {
+    if ($b == 0){
+        throw new InvalidArgumentException("Divisão por zero não é permitida.");
+    }
+    return $a / $b;
+}
+echo "A divisao de 10 por 2 é: " . divisao(10, 2) . "<br>";
+echo "A divisao de 30 por 5 é: " . divisao(30, 5) . "<br>";
+echo divisao(10, 2) / divisao(30, 5) . "<br>";
+
+var_dump(divisao(10, 2));
+echo "<hr>";
+
+?>;
