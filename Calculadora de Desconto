@@ -1,0 +1,17 @@
+<?php
+
+$preco = 100.0;
+$desconto = 20.0;
+
+echo "<h1>Calcular Desconto</h1>";
+echo "<hr>";
+
+function CalcularDesconto(float $preco, float $desconto): float {
+    return $preco - ($preco * $desconto / 100);
+}
+echo "O preço original é: R$" . number_Format($preco, 2) . "<br>";
+echo "O desconto é de: " . number_Format($desconto, 2) . "%<br>";
+echo "O preço com desconto é: R$" . number_Format(CalcularDesconto($preco, $desconto), 2, ',', '.') . "<br>";
+echo "<hr>";
+
+?>;
