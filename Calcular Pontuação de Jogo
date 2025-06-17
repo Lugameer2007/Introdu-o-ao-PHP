@@ -1,0 +1,30 @@
+<?php
+
+$pontos = 100;
+
+echo "<h1>Calcualar Pontuação de Jogo</h1>";
+echo "<hr>";
+
+function CalcularPontuaçãoDeJogo(int $pontos): string {
+echo "A cada vitória ele ganha 20 pontos.<br>";
+echo "A cada derrota ele perte 15 pontos.<br>";
+    if ($pontos >= 100) {
+        return "Parabéns! Voce alcançou a pontuação máxima.";
+    }
+    else if ($pontos >= 50) {
+        return "Bom Trabalho! Voce está quase lá.";
+    }
+    else if ($pontos >= 20){
+        return "Continue jogando! Voce está indo bem.";
+    }
+    else {
+        return "Não desista! Voce pode melhorar.";
+    }
+}
+function pontos (int $pontos): int {
+    return $pontos;
+}
+echo "A pontuação final é:" . pontos($pontos) . "<br>";
+echo CalcularPontuaçãoDeJogo(pontos($pontos)) . "<br>";
+echo "<hr>";
+?>;
