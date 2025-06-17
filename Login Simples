@@ -1,0 +1,49 @@
+<?php
+
+$nomeDeUsuario = '';
+$senha = '';
+echo "<h1>Login</h1>";
+echo "<hr>";
+
+function ValidarLogin(string $nomeDeUsuario, string $senha): string {
+    if ($nomeDeUsuario === 'admin' && $senha === '1234'){
+        return "Login realizado com sucesso!";
+    }
+    else {
+        return "Usuário ou senha inválidos!";
+    }
+}
+echo ValidarLogin($nomeDeUsuario, $senha) . "<br>";
+echo "<hr>";
+
+function verificarSenha(string $senha): string {
+    if (strlen($senha) > 6) {
+        return "Senha válida!";
+    }
+    else{
+        return "Senha inválida! A senha deve ter mais de 6 caracteres.";
+    }
+}
+function VerificarUsuario(string $nomeDeUsuario): string {
+    if (preg_match('/^[a-zA-Z0-9_]{3,20}$/', $nomeDeUsuario)){
+        return "Usuário Válido!";
+    }
+    else{
+        return "Usuário inválido! O nome de usuário deve ter entre 3 e 20 caracteres e pode conter letras, números e underscores.";
+    }
+}
+?>
+<h1>Login</h1>
+<hr>
+<form method="post">
+Usuário: <input type="text" name="nomeDeUsuario" required><br>
+Senha: <input type="password" name="senha" required><br><br>
+<input type="submit" value="Entrar">
+</form>
+
+<hr>
+<?php if ($_SERVER['REQUEST_METHOD'] === 'POST'): ?>
+    <p><?= $mensagemLogin ?></p>
+    <p><?= $mensagemSenha ?></p>
+    <p><?= $mensagemUsuário ?></p>
+<?php endif; ?>
