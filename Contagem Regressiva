@@ -1,0 +1,17 @@
+<?php
+
+echo "<h1> Contagem Regressiva</h1>";
+echo "<hr>";
+
+function ContagemRegressiva() {
+    for ($i = 10; $i >= 0; $i --) {
+        echo $i . "<br>";
+    }
+}
+echo "Feliz Ano Novo!";
+echo "<hr>";
+ContagemRegressiva();
+echo "<br>";
+echo "Contagem Regressiva Concluída!";
+echo "<br>";
+?>;
