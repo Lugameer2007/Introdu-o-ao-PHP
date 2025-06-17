@@ -1,0 +1,21 @@
+<?php
+    $alunos = [
+        "João" => [
+            "nota" => 8,
+        ],
+        "Pedro Emanuel" => [
+            "nota" => 9,
+        ],
+        "Manuele" => [
+            "nota" => 7,
+        ]
+        ];
+    foreach($alunos as $alunosNome => $alunosInfo){
+    echo "Nome: " . $alunosNome . "<br>";
+    echo "Nota: " . $alunosNota . "<br>";
+    
+    $media <= $alunosNota['nota']/3;
+}
+echo "Média da turma: " . number_format($media, 2) , "<br>";
+
+?>
