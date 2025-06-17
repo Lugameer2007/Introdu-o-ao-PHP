@@ -1,0 +1,23 @@
+<?php
+
+$idade = 17;
+if ($idade >= 18) {
+    echo "Voce é mnaior de idade.";
+}
+else {
+    echo "Voce é menor de idade.";
+}
+echo "<hr>";
+
+//Esse tem dois jeitos de fazer, pela função e sem ela
+
+function CalcularMaioridade(int $idade): string {
+    if ($idade >= 18) {
+        return "Voce é maior de idade.";
+    }
+    else {
+        return "Voce é menor de idade.";
+    }
+}
+echo CalcularMaioridade($idade) . "<br>";
+?>;
