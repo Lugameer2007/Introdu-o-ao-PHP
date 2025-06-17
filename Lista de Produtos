@@ -1,0 +1,22 @@
+<?php
+
+echo "<h1> Lista de Produtos:</h1>";
+echo "<hr>";
+
+function listarProdutos($produtos) {
+    echo "<h3> Liata de Produtos:</h3>";
+    foreach ($produtos as $produto) {
+        echo "Produto: " . $produto['nome'] . "<br>";
+        echo "Preço: R$ " . number_format($produto['preco'], 2, ',', '.') . "<br><br>";
+    }
+}
+$meusProdutos = [
+    ['nome' => 'Camisa', 'preco' => 59.90],
+    ['nome' => 'Calça Jeans', 'preco' => 120.00],
+    ['nome' => 'Tênis', 'preco' => 199.99],
+    ['nome' => 'Colar', 'preco' => 100.00],
+    ['nome' => 'Relógio', 'preco' => 250.00]
+];
+listarProdutos($meusProdutos);
+
+?>;
