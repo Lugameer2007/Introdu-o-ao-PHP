@@ -1,0 +1,14 @@
+<?php
+
+echo "<h1> Boas Vindas </h1>";
+echo "<hr>";
+
+function boasVindas($nome) {
+    echo "Bem vinod(a), $nome!<br>";
+}
+boasVindas("Lara");
+boasVindas("Ana");
+boasVindas("Carlos");
+boasVindas("Antonio");
+
+?>;
