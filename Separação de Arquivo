@@ -7,10 +7,10 @@ $mensagem = '';
     $PreçoDoProduto = $_POST['userPreçoDoProduto'] ?? '';
     $QuantidadeEmEstoque = $_POST['userQuantidadeEmEstoque'] ?? '';
 
-    $mensagem ="Nome do Produto: $NomeDoProduto\n";
-    $mensagem ="Categoria: $Categoria\n";
-    $mensagem ="Preço do Produto: $PreçoDoProduto\n"; 
-    $mensagem ="Quantidade em Estoque: $QuantidadeEmEstoque\n"; 
+    $mensagem ="Nome do Produto: $NomeDoProduto . <br>";
+    $mensagem ="Categoria: $Categoria . <br>";
+    $mensagem ="Preço do Produto: $PreçoDoProduto . <br>"; 
+    $mensagem ="Quantidade em Estoque: $QuantidadeEmEstoque . <br>"; 
 
     }
 ?>
