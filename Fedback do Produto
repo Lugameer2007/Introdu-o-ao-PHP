@@ -1,0 +1,64 @@
+<?php
+
+   if($_SERVER["REQUEST_METHOD"] === "POST") {
+    $userNomeDoCliente = $_POST['userNomeDoCliente'] ?? '';
+    $userPrdutoSeletor = $_POST['userProdutoSeletor'] ?? '';
+    $userAvaliação = $_POST['userAvaliação'] ?? '';
+    $userXComentário = $_POST['userComentário'] ?? '';
+
+    echo "Nome do Cliente: $userNomeDoCliente . <br>";
+    echo "Produto Selecionado: $userProdutoSeletor . <br>";
+    echo "Avaliação do Produto: $userAvaliação . <br>";
+    echo "comentário: $userxComentário . <br>";
+
+   }
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fedback De Produto</title>
+</head>
+<body>
+    <form method="POST">
+        <label for="userNomeDoCliente">
+            <p>Nome Do Cliente:</p>
+        </label>
+        <input type="text" id="userNomeDoCliente" name="userNomeDoCliente" placehoder="Digite o Nome do Cliente" required>
+        <button type="submit">Enviar</button>
+
+        <label for="userProdutoSeletor">
+            <p>Selecionar Campo</p>
+        </label>
+        <select id="userProdutoSeletor" name="userPrdutoSeletor" required>
+            <option value="Produto 1">Produto 1</option>
+            <option value="Produto 2">Produto 2</option>
+            <option value="Produto 3">Produto 3</option>
+            <option value="Produto 4">Produto 4</option>
+            <option value="Prduto 5">Produto 5</option>
+        </select>
+        <button type="submit">Enviar</button>
+        
+        <label for="userAvaliação">
+            <p>Avaliação do Produto</p>
+        </label>
+        <select id="userAvaliação" name="userAvaliação" required>
+            <option value="1">1 Estrela</option>
+            <option value="2">2 Estrelas</option>
+            <option value="3">3 Estrelas</option>
+            <option value="4">4 Estrelas</option>
+            <option value="5">5 Estrelas</option>
+        </select>
+        <button type="submit">Enviar</button>
+
+        <label for="userComentário">
+            <p>Comentário:</p>
+        </label>
+        <textarea id="userComentário" name="userComentário" placehoder="Digite seu comentério" required></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+    <button type="button">Enviar Formulario</button>
+</body>
+</html>
