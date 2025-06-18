@@ -1,0 +1,55 @@
+<?php
+$mensagem = '';
+
+  if($_SERVER["REQUEST_METHOD"] === "POST") {
+    $NomeDoProduto = $_POST['userNomeDoProduto'] ?? '';
+    $Categoria = $_POST['userCategoria'] ?? '';
+    $PreçoDoProduto = $_POST['userPreçoDoProduto'] ?? '';
+    $QuantidadeEmEstoque = $_POST['userQuantidadeEmEstoque'] ?? '';
+
+    $mensagem ="Nome do Produto: $NomeDoProduto\n";
+    $mensagem ="Categoria: $Categoria\n";
+    $mensagem ="Preço do Produto: $PreçoDoProduto\n"; 
+    $mensagem ="Quantidade em Estoque: $QuantidadeEmEstoque\n"; 
+
+    }
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <form method="POST">
+        <label for="userNomeDoProduto">
+            <p>Nome do Produto:</p>
+        </label>
+        <input type="Nome do Produto:" id="userNomeDoProduto" name="userNomeDoProtuto" placeholder="Digite o Nome do Produto" required>
+        <button type="submit">Entrar</button>
+
+    <label for="userCategoria">
+        <p>Categoria:</p>
+    </label>
+        <input type="text" id="userCategoria" name="userCategoria" placeholder="Digite a Categoria do Produto" required>
+        <button type="submit">Enviar</button>
+
+    <label for="userPreçoDoProduto">
+        <p>Preço Do Produto</p>
+    </label>
+        <input type="numnber" id="userPreçoDoProduto" name="userPreçoDoProduto" placeholder="Digite o Preço do Produto" required>
+        <button type="submit">Enviar</button>
+    
+    <label for="userQuantidadeEmEstoque">
+        <p>Quantidade Em Estoque</p>
+    </label>
+        <input type="number" id="userQuantidadeEmEstoque" name="userQuantidadeEmEstoque" placeholder="Digite a Quantidade Em Estoque" required>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <button type="button">Enviar Formulario</button>
+    
+</body>
+</html>
